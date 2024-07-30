@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage - Copy.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+   
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <!-- Menu -->
+    
+        <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+           
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        
+        
+        .center {
+                margin: auto;
+                width: 98%;
+                border: 3px solid #73AD21;
+                padding: 5px 5px 5px 20px;
+        }
+        .pagetitle{
+        	 width: 99%;
+        	 background-color: black;
+        	 height:30px;
+        	 color:White;
+        	 padding: 10px;
+        	 text-align: left;
+        
+        }
+            .auto-style1 {
+                text-align: center;
+            }
+            .auto-style3 {
+                height: 74px;
+            }
+            .auto-style4 {
+                height: 74px;
+                text-align: center;
+                font-size: small;
+            }
+    </style>   
+    
+</head>
+
+<body style="margin:0;padding:01;background-color:#f1f1f1">
+    <form id="form1" runat="server">
+   
+    <table style="width:100%;">
+    <tr>
+       <td>
+       <img src="App_Themes/images/logo.jpeg" style="height: 133px; width: 151px" />
+       </td>
+       <td >
+           <h1 class="auto-style1">AGILE DEVELOPMENT OF SECURE WEB AND MOBILE APPLICATIONS FOR SCHOOL STUDENT GRADE MANAGEMENT </h1>      </td>
+    </tr>
+    </table>
+    
+    <div class="center">
+        <div class="dropdown">
+          <button class="dropbtn">Home</button>
+          <div class="dropdown-content">
+            <a href="Default.aspx">HOME</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Student Master</button>
+          <div class="dropdown-content">
+            <a href="StoreStudent_Excel.aspx">Registration</a>
+            <a href="ViewStudent.aspx">View Student</a>
+          </div>
+        </div>
+     
+       <div class="dropdown">
+          <button class="dropbtn">Exam Schedule Entry</button>
+          <div class="dropdown-content">
+            <a href="StoreExamSchedule_Excel.aspx">Exam Schedule Entry </a>
+          
+          </div>
+       </div>
+          
+       <div class="dropdown">
+          <button class="dropbtn">Exam Marks</button>
+          <div class="dropdown-content">
+            <a href="MarkEntry.aspx">Exam Mark Entry </a>
+         
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Discipline</button>
+          <div class="dropdown-content">
+            <a href="DisciplineEntry.aspx">Discipline Entry </a>
+         
+          </div>
+        </div>
+        
+         <div class="dropdown">
+          <button class="dropbtn">Events </button>
+          <div class="dropdown-content">
+            <a href="EventEntry.aspx">Events Entry</a>
+           
+          </div>
+        </div>
+
+         <div class="dropdown">
+          <button class="dropbtn"> Notification </button>
+          <div class="dropdown-content">
+            <a href="Exam_Email.aspx">Exam Notification</a>
+            <a href="Event_Email.aspx">Event Notification </a>
+          </div>
+        </div>
+        
+         <div class="dropdown">
+          <button class="dropbtn">Exam Report</button>
+          <div class="dropdown-content">
+            <a href="ExamReport.aspx">Exam Report </a>
+            <a href="WeakerReport.aspx">Weak Student Report </a>
+          </div>
+        </div>
+
+       
+
+                       
+       <div class="dropdown">
+          <button class="dropbtn">Mobile App </button>
+          <div class="dropdown-content">
+          
+            <a href="JSONGetAllStudent.aspx">Get Student</a>
+            <a href="JSONGetExamMessage.aspx">Get Exam</a>
+            <a href="JSONGetEventMessage.aspx">Get Event</a>
+            <a href="JSONGetDiscplineMessage.aspx">Get Discpline</a>
+           
+          </div>
+        </div>
+        
+       
+     </div>   <!-- menu bar -->
+        
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer" style=" background-color: #4CAF50; " class="auto-style3">
+     <p class="auto-style4"> Project Work</p>
+    </div>
+    </form>
+</body>
+</html>
